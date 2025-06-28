@@ -6,5 +6,7 @@ public class CWH_04_laterals {
         long ageDino = 3888888888L;
         float f1= 5.4f;
         System.out.println(age);
+        String str = "Aditi";
+        System.out.println(str);
     }
 }
