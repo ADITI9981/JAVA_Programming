@@ -1,1 +1,20 @@
+public class UserMainCode
+{
+    public long nthFibonacci(int input1) {
+        // Handle base cases
+        if (input1 == 0) return 0;
+        if (input1 == 1) return 1;
 
+        long first = 0;
+        long second = 1;
+        long third = 0;
+
+        for (int i = 2; i <= input1; i++) {
+            third = first + second;
+            first = second;
+            second = third;
+        }
+
+        return third;
+    }
+}
