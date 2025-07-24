@@ -1,1 +1,24 @@
+public class Main {
+    
+    public static int digitSum(int num) {
+        int sign = num < 0 ? -1 : 1;
+        num = Math.abs(num);
 
+        while (num >= 10) {
+            int sum = 0;
+            while (num > 0) {
+                sum += num % 10;
+                num /= 10;
+            }
+            num = sum;
+        }
+
+        return sign * num;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(digitSum(976592));    // Output: 2
+        System.out.println(digitSum(123456));    // Output: 3
+        System.out.println(digitSum(-123456));   // Output: -3
+    }
+}
