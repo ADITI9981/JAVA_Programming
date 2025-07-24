@@ -1,1 +1,15 @@
+import java.io.*;
+import java.util.*;
 
+// Read only region start
+class UserMainCode
+{
+    public int secondLastDigitof(int input1)
+    {
+        // Read only region end
+        // Write code here...
+        int lastsecond = Math.abs(input1 / 10);       // Remove the last digit
+        lastsecond = lastsecond % 10;                 // Extract the new last digit (which is originally second last)
+        return lastsecond;
+    }
+}
