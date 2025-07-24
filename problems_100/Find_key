@@ -1,1 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+class UserMainCode {
+    public int findKey(int input1, int input2, int input3) {
+        int[] inputs = {input1, input2, input3};
+        int sumLargest = 0;
+        int sumSmallest = 0;
+
+        for (int num : inputs) {
+            int maxDigit = 0;
+            int minDigit = 9;
+            while (num > 0) {
+                int digit = num % 10;
+                maxDigit = Math.max(maxDigit, digit);
+                minDigit = Math.min(minDigit, digit);
+                num /= 10;
+            }
+            sumLargest += maxDigit;
+            sumSmallest += minDigit;
+        }
+
+        return sumLargest - sumSmallest;
+    }
+}
 
