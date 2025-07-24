@@ -1,1 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+class UserMainCode {
+    public int findCountOfOrderedWords(String input1) {
+        if (input1 == null || input1.trim().isEmpty()) {
+            return 0;
+        }
+
+        String[] words = input1.split(" ");
+        int count = 0;
+
+        for (String word : words) {
+            if (isOrdered(word)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    private boolean isOrdered(String word) {
+        for (int i = 0; i < word.length() - 1; i++) {
+            if (word.charAt(i) > word.charAt(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
 
