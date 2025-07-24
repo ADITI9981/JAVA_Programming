@@ -1,1 +1,14 @@
+import java.io.*;
+import java.util.*;
 
+// Read only region start
+class UserMainCode
+{
+    public int lastDigitof(int input1)
+    {
+        // Read only region end
+        // Write code here...
+        int last = Math.abs(input1 % 10);
+        return last;
+    }
+}
